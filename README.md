@@ -1,0 +1,2 @@
+# point_cloud_panoramic_image_registration
+一个用于给点云上色的项目
