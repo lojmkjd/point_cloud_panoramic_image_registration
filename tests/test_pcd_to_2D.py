@@ -24,9 +24,9 @@ def test_pcd_to_2D():
     pose_df = pd.read_csv(pose_path)  # 使用 pandas 读取 CSV 文件
     
     # 从 CSV 文件中提取相机位姿信息
-    x, y, z = pose_df['X'].values[0], pose_df['Y'].values[0], pose_df['Altitude'].values[0]  # 平移向量
-    roll, pitch, yaw = pose_df['Roll'].values[0], pose_df['Pitch'].values[0], pose_df['Heading'].values[0]  # 旋转角度
-    Width,Height =pose_df['Width'].values[0],pose_df['Height'].values[0]
+    x, y, z = pose_df['X'].values[8], pose_df['Y'].values[8], pose_df['Altitude'].values[8]  # 平移向量
+    roll, pitch, yaw = pose_df['Roll'].values[8], pose_df['Pitch'].values[8], pose_df['Heading'].values[8]  # 旋转角度
+    Width,Height =pose_df['Width'].values[8],pose_df['Height'].values[8]
 
     # 创建坐标变换器
     transformer = CoordinateTransformer()

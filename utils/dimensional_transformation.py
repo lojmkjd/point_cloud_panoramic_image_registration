@@ -47,7 +47,7 @@ class DimensionalTransformation:
         # 将三维点云数据转换为球坐标
         polar_points = self.cartesian_to_polar(points)
         # 根据等距投影模型,计算像素坐标
-        pixel_x = (polar_points[:, 1] + np.pi) / (2 * np.pi) * Width
+        pixel_x = (- polar_points[:, 1] + np.pi) / (2 * np.pi) * Width
         pixel_y = polar_points[:, 2] / np.pi * Height
         pixel_points = np.column_stack([pixel_x, pixel_y])
         return pixel_points

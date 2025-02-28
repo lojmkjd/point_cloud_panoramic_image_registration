@@ -16,7 +16,7 @@ class PanoramicImageToSphere:
         """
         h, w = image_shape
         pixel_y, pixel_x = np.indices(image_shape)
-        phi = pixel_x * 2 * np.pi / w - np.pi   # 经度 [-π, π]
+        phi = - pixel_x * 2 * np.pi / w + np.pi   # 经度 [-π, π]
         theta = pixel_y * np.pi / h            # 极角 [0, π]
         return phi, theta
 
